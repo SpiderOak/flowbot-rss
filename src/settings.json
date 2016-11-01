@@ -1,0 +1,6 @@
+{
+  "username": "some-unique-rss-bot-username",
+  "display_name": "rss",
+  "password": "MyBotsSuperSecretPassword",
+  "org_id": "TEAM-ID"
+}

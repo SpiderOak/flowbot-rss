@@ -1,0 +1,10 @@
+Ok, no longer watching {{ url }}
+
+{% if urls -%}
+Remaining RSS feeds:
+{% for url in urls -%}
+[{{url.id}}]: {{ url.url}}
+{% endfor %}
+{% else -%}
+No longer subscribed to any feeds
+{% endif %}

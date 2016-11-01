@@ -1,0 +1,10 @@
+{% if urls -%}
+Currently subscribed to these RSS feeds:
+{% for url in urls -%}
+[{{url.id}}]: {{ url.url}}
+{% endfor %}
+Unsubscribe from a particular feed with "@{{ botname }} unwatch <ID>"
+{% else -%}
+Not subscribed to any feeds yet. Subscribe with:
+"@{{ botname }} watch <feedUrl>"
+{% endif %}
