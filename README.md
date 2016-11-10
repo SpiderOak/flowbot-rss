@@ -4,7 +4,7 @@
 A RSS bot for Semaphor!
 
 ## Running locally
-1. Download this code: https://github.com/SpiderOak/flowbot-rss.git
+1. Download this code: `git clone https://github.com/SpiderOak/flowbot-rss.git`
 2. Modify `src/settings.py` with your bot's specific settings
   - `username` is the username you'd like the bot to have
   - `password` the bot's password (Recovery Key), keep this safe.
