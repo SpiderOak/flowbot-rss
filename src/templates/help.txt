@@ -1,9 +1,10 @@
-To start watching a new RSS feed in this channel:
 {{ ':small_blue_diamond:' | emoji }} @{{ botname }} watch <feedUrl>
+will start watching a new RSS feed in this channel
 
-To list all feeds currently watched in this channel:
 {{ ':small_blue_diamond:' | emoji }} @{{ botname }} list
+will list all feeds currently watched in this channel and assign each an id, which you can use to unwatch (below)
 
-To stop watching a feed:
 {{ ':small_blue_diamond:' | emoji }} @{{ botname }} unwatch <id>
-Where <id> is the id shown in the list (see above)
+will stop watching the feed, where <id> is the id shown in the list (see above)
+
+This bot is open-sourced: https://github.com/SpiderOak/flowbot-rss
