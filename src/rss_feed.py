@@ -2,7 +2,6 @@ import feedparser
 import redis
 from datetime import datetime, timedelta
 import os
-from template_env import ENV
 
 
 class RssFeed(object):
@@ -23,7 +22,7 @@ class RssFeed(object):
         """Find all entries for this feed; send new entries to all channels."""
         feed_content = feedparser.parse(self.url)
         for entry in self._get_new_entries(feed_content):
-            self._alert_channels_of_new_entry(entry)
+            self._alert_channels_of_new_entry(entry, feed_content)
 
     def _get_new_entries(self, feed_content):
         for entry in feed_content.get('entries', []):
@@ -70,11 +69,12 @@ class RssFeed(object):
         entry_id = self._get_entry_id(entry)
         self.redis.sadd(self.url, entry_id)
 
-    def _alert_channels_of_new_entry(self, entry):
+    def _alert_channels_of_new_entry(self, entry, feed):
         """Message all channels with a summary of the new entry."""
         for channel_id in self.channels:
             self.bot._render_to_channel(channel_id, 'new_entry.txt', {
-                "entry": entry
+                "entry": entry,
+                "feed": feed
             })
 
     @staticmethod
