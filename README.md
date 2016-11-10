@@ -3,7 +3,9 @@
 # flowbot-rss
 A RSS bot for Semaphor!
 
-## Running locally
+## Running locally via Docker
+Make sure you have docker installed and running locally before attempting to run this bot.
+
 1. Download this code: `git clone https://github.com/SpiderOak/flowbot-rss.git`
 2. Modify `src/settings.py` with your bot's specific settings
   - `username` is the username you'd like the bot to have
