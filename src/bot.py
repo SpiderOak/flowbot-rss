@@ -14,7 +14,8 @@ class RssBot(FlowBot):
         return {
             'unwatch': self.unwatch,
             'watch': self.watch,
-            'list': self.list
+            'list': self.list,
+            'help': self.help
         }
 
     @mentioned
@@ -48,6 +49,13 @@ class RssBot(FlowBot):
         channel_id = flow_message['channelId']
         self._render_response(flow_message, 'list.txt', {
             "urls": self._get_indexed_feeds_for_channel(channel_id),
+            "botname": self.config.display_name
+        })
+
+    @mentioned
+    def help(self, flow_message):
+        """Command bot to show a help message."""
+        self._render_response(flow_message, 'help.txt', {
             "botname": self.config.display_name
         })
 

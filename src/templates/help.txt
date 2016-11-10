@@ -1,0 +1,9 @@
+To start watching a new RSS feed in this channel:
+{{ ':small_blue_diamond:' | emoji }} @{{ botname }} watch <feedUrl>
+
+To list all feeds currently watched in this channel:
+{{ ':small_blue_diamond:' | emoji }} @{{ botname }} list
+
+To stop watching a feed:
+{{ ':small_blue_diamond:' | emoji }} @{{ botname }} unwatch <id>
+Where <id> is the id shown in the list (see above)
