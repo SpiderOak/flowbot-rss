@@ -15,3 +15,10 @@ Make sure you have docker installed and running locally before attempting to run
   - `photo` (optional) the filename of the image used for the bot's avatar
 3. Run `make` from this directory.
 
+## Example Usage
+
+![watch](/doc/img/watch.png)
+
+![list](/doc/img/list.png)
+
+![help](/doc/img/help.png)
